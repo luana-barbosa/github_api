@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.luanabarbosa.verity.githubapi.ui.splash.SplashFragment"
+        android:label="StartFragment"
+        tools:layout="@layout/github_splash_fragment">
+
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.luanabarbosa.verity.githubapi.home.ui.GithubHomeFragment"
+        android:label="GithubHomeFragment"
+        tools:layout="@layout/github_home_fragment"/>
+
+        <fragment
+            android:id="@+id/profileFragment"
+            android:name="com.luanabarbosa.verity.githubapi.profile.ui.GithubUserProfileFragment"
+            android:label="ProfileFragment"
+            tools:layout="@layout/github_profile_user_fragment">
+            <action
+                android:id="@+id/action_profileFragment_to_reposFragment"
+                app:destination="@id/reposFragment" />
+        </fragment>
+
+    <fragment
+        android:id="@+id/reposFragment"
+        android:name="com.luanabarbosa.verity.githubapi.profile.ui.GithubProfileRepoFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/github_profile_repos_fragment">
+        <action
+            android:id="@+id/action_reposFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/view_guideline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_size_2dp"
+        android:layout_marginTop="@dimen/ui_size_8dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:importantForAccessibility="no"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/ui_size_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_guideline">
+
+        <TextView
+            android:id="@+id/name_repo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/ui_size_16dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/ui_txt_size_16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/description_repo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="defunkt" />
+
+        <TextView
+            android:id="@+id/description_repo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/ui_txt_size_14sp"
+            app:layout_constraintBottom_toTopOf="@+id/fork_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="https://github.com/mojombohttps://github.com/mojombohttps://github.com/mojombohttps://github.com/mojombohttps://github.com/mojombohttps://github.com/mojombo" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/fork_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/ui_size_16dp"
+            android:layout_marginTop="@dimen/ui_size_8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description_repo">
+
+            <ImageView
+                android:id="@+id/fork_repo"
+                android:layout_width="@dimen/ui_size_16dp"
+                android:layout_height="@dimen/ui_size_16dp"
+                android:src="@drawable/baseline_get_app_24" />
+
+            <TextView
+                android:id="@+id/fork_count_repo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/ui_size_8dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/ui_txt_size_12sp"
+                tools:text="13" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/stars_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/ui_size_16dp"
+            android:layout_marginTop="@dimen/ui_size_4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fork_container">
+
+            <ImageView
+                android:id="@+id/ic_stars_repo"
+                android:layout_width="@dimen/ui_size_16dp"
+                android:layout_height="@dimen/ui_size_16dp"
+                android:src="@drawable/baseline_stars_24" />
+
+            <TextView
+                android:id="@+id/starts_count_repo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/ui_size_8dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/ui_txt_size_12sp"
+                tools:text="97" />
+
+            <ImageView
+                android:id="@+id/ic_language_repo"
+                android:layout_width="@dimen/ui_size_16dp"
+                android:layout_height="@dimen/ui_size_16dp"
+                android:layout_marginStart="@dimen/ui_size_24dp"
+                android:src="@drawable/baseline_language_24" />
+
+            <TextView
+                android:id="@+id/language_repo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_size_8dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                tools:text="C" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

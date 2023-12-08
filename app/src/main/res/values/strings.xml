@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Github API</string>
+    <string name="toolbar_profile">Perfil</string>
+    <string name="toolbar_repos">Repositórios</string>
+    <string name="toolbar_home">Home</string>
+
+    <string name="error_title">Não foi possível carregar. \nVerifique sua internet e tente outra vez.</string>
+    <string name="error_subtitle">Tentar novamente</string>
+
+    <string name="home_txt_link">Github: %1$s</string>
+    <string name="home_txt_name">Nome: %1$s</string>
+    <string name="home_txt_empty_name">Nome: Não informado</string>
+
+</resources>

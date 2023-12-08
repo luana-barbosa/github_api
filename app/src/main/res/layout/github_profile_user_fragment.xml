@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_profile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ui_size_56dp"
+            android:background = "@drawable/bg_light_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/ui_size_16dp"
+                android:gravity="center_vertical"
+                android:text="@string/toolbar_profile"
+                android:textColor="@color/black"
+                android:textSize="@dimen/ui_txt_size_24sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/avatar_profile"
+            android:layout_width="@dimen/ui_size_50dp"
+            android:layout_height="@dimen/ui_size_50dp"
+            android:layout_margin="@dimen/ui_size_16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_profile"
+            tools:src="@drawable/baseline_person_30" />
+
+        <TextView
+            android:id="@+id/txt_real_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_size_16dp"
+            android:textSize="@dimen/ui_txt_size_16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/avatar_profile"
+            app:layout_constraintTop_toTopOf="@+id/avatar_profile"
+            tools:text="Linus Torvalds" />
+
+
+        <TextView
+            android:id="@+id/txt_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ui_txt_size_14sp"
+            app:layout_constraintStart_toStartOf="@+id/txt_real_name"
+            app:layout_constraintTop_toBottomOf="@+id/txt_real_name"
+            tools:text="torvalds" />
+
+        <TextView
+            android:id="@+id/txt_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_size_16dp"
+            android:textSize="@dimen/ui_txt_size_16sp"
+            app:layout_constraintStart_toStartOf="@+id/avatar_profile"
+            app:layout_constraintTop_toBottomOf="@+id/avatar_profile"
+            tools:text="Linux Foundation" />
+
+        <ImageView
+            android:id="@+id/ic_location"
+            android:layout_width="@dimen/ui_size_20dp"
+            android:layout_height="@dimen/ui_size_20dp"
+            android:layout_margin="@dimen/ui_size_16dp"
+            android:src="@drawable/baseline_location_on_30"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_company" />
+
+        <TextView
+            android:id="@+id/txt_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_size_8dp"
+            android:textSize="@dimen/ui_txt_size_16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_location"
+            app:layout_constraintStart_toEndOf="@+id/ic_location"
+            app:layout_constraintTop_toTopOf="@+id/ic_location"
+            tools:text="Portland, OR" />
+
+        <ImageView
+            android:id="@+id/ic_link"
+            android:layout_width="@dimen/ui_size_20dp"
+            android:layout_height="@dimen/ui_size_20dp"
+            android:layout_margin="@dimen/ui_size_16dp"
+            android:src="@drawable/baseline_insert_link_30"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ic_location" />
+
+        <TextView
+            android:id="@+id/txt_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_size_8dp"
+            android:textSize="@dimen/ui_txt_size_16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_link"
+            app:layout_constraintStart_toEndOf="@+id/ic_link"
+            app:layout_constraintTop_toTopOf="@+id/ic_link"
+            tools:text="Portland, OR" />
+
+        <ImageView
+            android:id="@+id/ic_followers"
+            android:layout_width="@dimen/ui_size_20dp"
+            android:layout_height="@dimen/ui_size_20dp"
+            android:layout_margin="@dimen/ui_size_16dp"
+            android:src="@drawable/baseline_people_outline_30"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_link" />
+
+        <TextView
+            android:id="@+id/txt_followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_size_8dp"
+            android:textSize="@dimen/ui_txt_size_16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_followers"
+            app:layout_constraintStart_toEndOf="@+id/ic_followers"
+            app:layout_constraintTop_toTopOf="@+id/ic_followers"
+            tools:text="Portland, OR" />
+
+        <ImageView
+            android:id="@+id/ic_following"
+            android:layout_width="@dimen/ui_size_12dp"
+            android:layout_height="@dimen/ui_size_12dp"
+            android:layout_marginStart="@dimen/ui_size_16dp"
+            android:src="@drawable/baseline_hdr_weak_30"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_followers"
+            app:layout_constraintStart_toEndOf="@+id/txt_followers"
+            app:layout_constraintTop_toTopOf="@+id/txt_followers" />
+
+        <TextView
+            android:id="@+id/txt_following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_size_16dp"
+            android:textSize="@dimen/ui_txt_size_16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_following"
+            app:layout_constraintStart_toEndOf="@+id/ic_following"
+            app:layout_constraintTop_toTopOf="@+id/ic_following"
+            tools:text="Portland, OR" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/repo_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/ui_size_16dp"
+            android:layout_marginTop="@dimen/ui_size_32dp"
+            android:background="@drawable/bg_light_secondary"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_following">
+
+            <ImageView
+                android:id="@+id/ic_repo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ui_size_16dp"
+                android:src="@drawable/baseline_receipt_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/ui_size_24dp"
+                android:gravity="center_vertical"
+                android:text="@string/toolbar_repos"
+                android:textSize="@dimen/ui_txt_size_16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_repo_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/ui_txt_size_16sp"
+                tools:text="0" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/error_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ui_size_80dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ic_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_repeat_30" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/error_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/error_subtitle"
+            android:textSize="@dimen/ui_txt_size_12sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading"
+        android:layout_width="@dimen/ui_size_50dp"
+        android:layout_height="@dimen/ui_size_50dp"
+        android:layout_marginBottom="@dimen/ui_size_16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.304"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/github_loading" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
